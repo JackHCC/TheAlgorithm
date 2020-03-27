@@ -40,7 +40,6 @@ fval=-fval
 + 非线性规划
 1. **简介**：如果线性规划的最优解存在，其最优解只能在其可行域的边界上达到（特别是可行域的顶点上达到）；而非线性规划的最优解（如果最优解存在）则可能在其可行域的任意一点达到。
 ![非线性规划](https://upload-images.jianshu.io/upload_images/14093662-c27cae1fa529323f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 其中f(x)是标量函数， Beq,Aeq,B,A 是相应维数的矩阵和向量， Ceq(x),C(x) 是非线性向量函数。
 2. **代码实现**：
 >MATLAB代码实现：
@@ -78,8 +77,6 @@ y =
    10.0000
 ```
 >[参考链接](https://blog.csdn.net/starmoth/article/details/88412527)
-
-
 
 
 + 整数规划
