@@ -9,9 +9,8 @@ Matlab实现的一些数学基础算法(Some mathematical basic algorithms imple
 
 ### 优化问题
 + 线性规划
-1. **简介**：线性规划的目标函数可以是求最大值，也可以是求最小值，约束条件的不等号可以是小于号也可以是大于号。为了避免这种形式多样性带来的不便，Matlab 中规定线性规划的标准形式为
+1. **简介**：线性规划的目标函数可以是求最大值，也可以是求最小值，约束条件的不等号可以是小于号也可以是大于号。为了避免这种形式多样性带来的不便，Matlab 中规定线性规划的标准形式为：
 ![线性规划](https://upload-images.jianshu.io/upload_images/14093662-9044bd07c3f2399a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 其中 c 和 x 为 n 维列向量， A 、 Aeq 为适当维数的矩阵， b 、 beq 为适当维数的列向量。
 2. **代码实现**
 >**MATLAB实现**：MATLAB中求解线性规划的命令为：
@@ -20,7 +19,6 @@ Matlab实现的一些数学基础算法(Some mathematical basic algorithms imple
 [ x，fval ]=linprog（f，A，b，Aeq，beq，lb，ub）
 其中：返回的x为决策向量的取值； 返回的fval是目标函数的最大值；f为价值向量；A和b对应的是线性不等式约束；Aeq和beq对应的是线性等式约束；lb和ub分别对应的是决策向量的下界向量和上界向量。
 eg1:![线性规划](https://upload-images.jianshu.io/upload_images/14093662-34d792f1f57ef43f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 (1)化为Matlab标准型，即![线性规划](https://upload-images.jianshu.io/upload_images/14093662-6c2b7cc03d8c2e8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 (2)求解的Matlab程序如下：
 ```
@@ -33,10 +31,8 @@ fval=-fval
 ```
 >这里的zeros(3,1)是为了产生3行1列的全0矩阵，对应着x1,x2,x3均大于等于0的约束条件。
  eg2:可以转化为线性规划的问题
- 
 ![线性规划](https://upload-images.jianshu.io/upload_images/14093662-1e8c867f5afe3a4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![线性规划](https://upload-images.jianshu.io/upload_images/14093662-c9708cba53ff0815.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 可进一步把模型改写为：![线性规划](https://upload-images.jianshu.io/upload_images/14093662-e64ab0f6f9e2c5a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 [参考链接](https://blog.csdn.net/u013414501/article/details/50473855)
 **应用**：运输问题(产销平衡)、指派问题（匈牙利算法）、对偶理论与灵敏度分析、投资的收益和风险
